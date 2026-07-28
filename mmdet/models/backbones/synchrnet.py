@@ -27,7 +27,7 @@ import logging
 import torch.nn as nn
 from mmcv.cnn import constant_init, kaiming_init
 from mmcv.runner import load_checkpoint
-from apex.parallel import SyncBatchNorm
+from torch.nn import SyncBatchNorm
 from torch.utils.checkpoint import checkpoint
 import torch.nn.functional as F
 from ..registry import BACKBONES

@@ -75,9 +75,10 @@ short_version = '{}'
 
 
 def get_version():
+    g = {}
     with open(version_file, 'r') as f:
-        exec(compile(f.read(), version_file, 'exec'))
-    return locals()['__version__']
+        exec(compile(f.read(), version_file, 'exec'), g)
+    return g['__version__']
 
 
 if __name__ == '__main__':
